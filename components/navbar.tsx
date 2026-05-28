@@ -1,5 +1,4 @@
 'use client'
-
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
@@ -17,13 +16,39 @@ export default function Navbar() {
           QenzoChat.site
         </Link>
 
-        <div className="flex gap-6 text-white">
-          <Link href="#features">Features</Link>
-          <Link href="#pricing">Pricing</Link>
-          <Link href="#testimonials">Testimonials</Link>
-          <Link href="/dashboard">Dashboard</Link>
-        </div>
+       <div className="flex items-center gap-6 text-sm md:text-base">
 
+  <Link
+    href="/about"
+    className="hover:text-green-400 transition-all duration-300"
+  >
+    About
+  </Link>
+
+  <Link
+    href="/contact"
+    className="hover:text-green-400 transition-all duration-300"
+  >
+    Contact
+  </Link>
+
+  <Link
+    href="/privacy"
+    className="hover:text-green-400 transition-all duration-300"
+  >
+    Privacy
+  </Link>
+
+           <a
+  href="https://starhela.com/register.php?ref=ChatwithMula"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-green-500 hover:bg-green-600 transition-all duration-300 px-5 py-2 rounded-xl font-bold text-white shadow-lg"
+>
+  Start Earning
+</a>
+
+</div>
         <a
   href="https://starhela.com/register.php?ref=ChatwithMula"
   target="_blank"
