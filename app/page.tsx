@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
 
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-white text-black transition-colors duration-500 dark:bg-black dark:text-white">
 
       <EarningsTicker />
 

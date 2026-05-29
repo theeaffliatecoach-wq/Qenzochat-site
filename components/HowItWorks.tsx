@@ -1,7 +1,8 @@
 export default function HowItWorks() {
 
   return (
-    <section className="py-24 bg-black text-white">
+    <section className="py-24 bg-white dark:bg-black
+text-black dark:text-white">
 
       <div className="max-w-5xl mx-auto px-6 text-center">
 

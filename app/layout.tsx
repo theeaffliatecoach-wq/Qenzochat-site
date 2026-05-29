@@ -1,8 +1,7 @@
 import './globals.css'
-import { ThemeProvider } from 'next-themes'
 
 export const metadata = {
-  title: 'QenzoChat.site',
+  title: 'QenzoChat.com',
   description: 'Chat and earn online',
 }
 
@@ -14,15 +13,24 @@ export default function RootLayout({
 
   return (
 
-    <html lang="en" suppressHydrationWarning>
+   <html
+  lang="en"
+  suppressHydrationWarning
+  className="dark"
+  data-scroll-behavior="smooth"
+>
+      <body
+        className="
+          bg-white
+          text-black
+          dark:bg-black
+          dark:text-white
+          transition-colors
+          duration-500
+        "
+      >
 
-      <body>
-
-        <ThemeProvider attribute="class" defaultTheme="dark">
-
-          {children}
-
-        </ThemeProvider>
+        {children}
 
       </body>
 

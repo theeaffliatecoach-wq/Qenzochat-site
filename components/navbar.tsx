@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navbar() {
   return (
@@ -47,6 +48,7 @@ export default function Navbar() {
 >
   Start Earning
 </a>
+         <ThemeToggle />
 
 </div>
         <a

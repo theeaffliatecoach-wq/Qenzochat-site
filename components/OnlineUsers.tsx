@@ -28,48 +28,21 @@ const users = [
     status: 'Typing...',
     lastSeen: 'Active now',
   },
-  {
-    name: 'Emma',
-    country: 'UK',
-    flag: '🇬🇧',
-    age: 22,
-    image: '/users/emma.jpg',
-    status: 'Online',
-    lastSeen: '5 mins ago',
-  },
-  {
-    name: 'Daniel',
-    country: 'Germany',
-    flag: '🇩🇪',
-    age: 29,
-    image: '/users/daniel.jpg',
-    status: 'Typing...',
-    lastSeen: 'Active now',
-  },
-  {
-    name: 'Camila',
-    country: 'Brazil',
-    flag: '🇧🇷',
-    age: 26,
-    image: '/users/camila.jpg',
-    status: 'Online',
-    lastSeen: '1 min ago',
-  },
 ]
 
 export default function OnlineUsers() {
 
   return (
 
-    <section className="py-20 px-6 bg-black">
+    <section className="py-20 px-6 bg-gray-100 dark:bg-black transition-colors duration-500">
 
       <div className="max-w-7xl mx-auto">
 
-        <h2 className="text-5xl font-bold text-center mb-4">
+        <h2 className="text-5xl font-bold text-center mb-4 text-black dark:text-white">
           Foreigners Online Now
         </h2>
 
-        <p className="text-gray-400 text-center mb-14 text-lg">
+        <p className="text-gray-600 dark:text-gray-400 text-center mb-14 text-lg">
           Meet active chatters from different countries worldwide.
         </p>
 
@@ -80,8 +53,11 @@ export default function OnlineUsers() {
             <div
               key={index}
               className="
-                bg-zinc-900
-                border border-zinc-800
+                bg-white
+                dark:bg-zinc-900
+                border
+                border-gray-200
+                dark:border-zinc-800
                 rounded-3xl
                 overflow-hidden
                 hover:border-green-500
@@ -100,13 +76,11 @@ export default function OnlineUsers() {
                   className="w-full h-80 object-cover"
                 />
 
-                {/* ONLINE BADGE */}
                 <div className="
                   absolute
                   top-4
                   right-4
                   bg-black/70
-                  backdrop-blur-md
                   px-4
                   py-2
                   rounded-full
@@ -115,13 +89,7 @@ export default function OnlineUsers() {
                   gap-2
                 ">
 
-                  <div className="
-                    w-3
-                    h-3
-                    bg-green-500
-                    rounded-full
-                    animate-pulse
-                  "></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
 
                   <span className="text-sm font-medium text-white">
                     {user.status}
@@ -135,7 +103,7 @@ export default function OnlineUsers() {
 
                 <div className="flex items-center justify-between mb-2">
 
-                  <h3 className="text-2xl font-bold text-white">
+                  <h3 className="text-2xl font-bold text-black dark:text-white">
                     {user.name}, {user.age}
                   </h3>
 
@@ -145,7 +113,7 @@ export default function OnlineUsers() {
 
                 </div>
 
-                <p className="text-gray-400 mb-3">
+                <p className="text-gray-600 dark:text-gray-400 mb-3">
                   {user.country}
                 </p>
 
@@ -155,16 +123,16 @@ export default function OnlineUsers() {
                   justify-between
                   text-sm
                   text-gray-500
+                  dark:text-gray-400
                   border-t
-                  border-zinc-800
+                  border-gray-200
+                  dark:border-zinc-800
                   pt-3
                 ">
 
-                  <span>
-                    {user.lastSeen}
-                  </span>
+                  <span>{user.lastSeen}</span>
 
-                  <span className="text-green-400">
+                  <span className="text-green-500">
                     Available to chat
                   </span>
 

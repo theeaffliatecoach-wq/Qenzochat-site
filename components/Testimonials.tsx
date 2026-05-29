@@ -62,7 +62,7 @@ export default function Testimonials() {
 
   return (
 
-    <section className="py-24 px-6 bg-zinc-950">
+    <section className="py-16 bg-white dark:bg-zinc-950 transition-colors duration-500">
 
       <div className="max-w-7xl mx-auto">
 
@@ -85,7 +85,7 @@ export default function Testimonials() {
             <div
               key={index}
               className="
-                bg-black
+                bg-white dark:bg-black
                 border
                 border-zinc-800
                 rounded-3xl
@@ -118,7 +118,7 @@ export default function Testimonials() {
 
                   <div className="flex items-center gap-2">
 
-                    <h3 className="text-xl font-bold text-white">
+                    <h3 className="text-xl font-bold text-black dark:text-white">
                       {testimonial.name}
                     </h3>
 
@@ -147,7 +147,7 @@ export default function Testimonials() {
                 mb-5
               ">
 
-                <p className="text-sm text-gray-300">
+                <p className="text-sm text-gray-700 dark:text-gray-300">
                   Recent Earnings
                 </p>
 
