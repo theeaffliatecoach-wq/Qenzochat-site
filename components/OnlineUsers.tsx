@@ -34,7 +34,7 @@ export default function OnlineUsers() {
 
   return (
 
-    <section className="py-20 px-6 bg-gray-100 dark:bg-black transition-colors duration-500">
+    <section className="py-20 px-6 bg-white dark:bg-black transition-colors duration-500">
 
       <div className="max-w-7xl mx-auto">
 
@@ -52,20 +52,12 @@ export default function OnlineUsers() {
 
             <div
               key={index}
-              className="
-                bg-white
-                dark:bg-zinc-900
-                border
-                border-gray-200
-                dark:border-zinc-800
-                rounded-3xl
-                overflow-hidden
-                hover:border-green-500
-                hover:scale-[1.02]
-                transition-all
-                duration-300
-                shadow-2xl
-              "
+           className="
+  bg-gray-100 dark:bg-zinc-900
+  border border-gray-200 dark:border-zinc-800
+  rounded-3xl
+  transition-colors duration-500
+"
             >
 
               <div className="relative">
@@ -122,8 +114,8 @@ export default function OnlineUsers() {
                   items-center
                   justify-between
                   text-sm
-                  text-gray-500
-                  dark:text-gray-400
+                  text-gray-700 dark:text-gray-300
+text-gray-500 dark:text-gray-400
                   border-t
                   border-gray-200
                   dark:border-zinc-800

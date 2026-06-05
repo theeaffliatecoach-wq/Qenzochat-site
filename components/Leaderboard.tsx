@@ -8,7 +8,7 @@ export default function Leaderboard() {
 
   return (
 
-    <section className="py-24 bg-white dark:bg-black transition-colors duration-500">
+    <section className="py-24 bg-white dark:bg-black text-black dark:text-white transition-colors duration-500">
 
       <div className="max-w-4xl mx-auto px-6">
 
@@ -22,18 +22,7 @@ export default function Leaderboard() {
 
             <div
               key={index}
-              className="
-                bg-gray-100
-                dark:bg-zinc-900
-                border
-                border-gray-200
-                dark:border-zinc-800
-                rounded-2xl
-                p-6
-                flex
-                items-center
-                justify-between
-              "
+             className="bg-gray-100 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-2xl p-6 flex items-center justify-between"
             >
 
               <div className="flex items-center gap-4">

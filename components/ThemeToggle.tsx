@@ -3,77 +3,50 @@
 import { useEffect, useState } from 'react'
 
 export default function ThemeToggle() {
-
+  const [darkMode, setDarkMode] = useState(true)
   const [mounted, setMounted] = useState(false)
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark')
 
   useEffect(() => {
-
     setMounted(true)
 
-    const savedTheme = localStorage.getItem('theme')
+    const saved = localStorage.getItem('theme')
 
-    if (savedTheme === 'light') {
-
+    if (saved === 'light') {
       document.documentElement.classList.remove('dark')
-      setTheme('light')
-
+      setDarkMode(false)
     } else {
-
       document.documentElement.classList.add('dark')
-      setTheme('dark')
-
+      setDarkMode(true)
     }
-
   }, [])
 
   const toggleTheme = () => {
+    const html = document.documentElement
 
-    if (theme === 'dark') {
-
-      document.documentElement.classList.remove('dark')
-
+    if (html.classList.contains('dark')) {
+      html.classList.remove('dark')
       localStorage.setItem('theme', 'light')
-
-      setTheme('light')
-
+      setDarkMode(false)
     } else {
-
-      document.documentElement.classList.add('dark')
-
+      html.classList.add('dark')
       localStorage.setItem('theme', 'dark')
-
-      setTheme('dark')
-
+      setDarkMode(true)
     }
-
   }
 
   if (!mounted) return null
 
   return (
-
     <button
       onClick={toggleTheme}
       className="
-        px-4
-        py-2
-        rounded-xl
-        font-semibold
-        border
-        border-gray-300
-        dark:border-zinc-700
-        bg-white
-        text-black
-        dark:bg-zinc-900
-        dark:text-white
-        hover:scale-105
-        transition-all
-        duration-300
+        px-4 py-2 rounded-xl font-bold border
+        bg-white text-black
+        dark:bg-black dark:text-white
+        transition-all duration-300
       "
     >
-      {theme === 'dark' ? '☀ Light' : '🌙 Dark'}
+      {darkMode ? '☀ Light' : '🌙 Dark'}
     </button>
-
   )
 }

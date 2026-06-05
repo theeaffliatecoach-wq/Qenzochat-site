@@ -1,7 +1,7 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'QenzoChat.com',
+  title: 'QenzoChat.site',
   description: 'Chat and earn online',
 }
 
@@ -10,31 +10,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
   return (
-
-   <html
-  lang="en"
-  suppressHydrationWarning
-  className="dark"
-  data-scroll-behavior="smooth"
->
+    <html lang="en" suppressHydrationWarning>
       <body
         className="
-          bg-white
-          text-black
-          dark:bg-black
-          dark:text-white
-          transition-colors
-          duration-500
+          min-h-screen
+          bg-white text-black
+          dark:bg-black dark:text-white
+          transition-colors duration-500
         "
       >
-
         {children}
-
       </body>
-
     </html>
-
   )
 }

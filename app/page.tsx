@@ -18,26 +18,38 @@ import EarningsTicker from '@/components/EarningsTicker'
 import GlobalHeatmap from '@/components/GlobalHeatmap'
 import Leaderboard from '@/components/Leaderboard'
 import InstallModal from '@/components/InstallModal'
+import EarningOpportunities from '@/components/EarningOpportunities'
 
 export default function Home() {
-
   return (
+    <main
+      className="
+        min-h-screen
+        bg-white
+        text-black
+        dark:bg-black
+        dark:text-white
+        transition-colors
+        duration-500
+        flex
+        flex-col
+      "
+    >
 
-    <main className="min-h-screen bg-white text-black transition-colors duration-500 dark:bg-black dark:text-white">
-
+      {/* TOP GLOBAL STRIP */}
       <EarningsTicker />
-
       <Navbar />
 
+      {/* HERO SECTION */}
       <Hero />
 
+      {/* MAIN CTA */}
       <section className="py-20 flex flex-col items-center justify-center text-center px-6">
-
-        <h1 className="text-7xl font-bold mb-6">
+        <h1 className="text-6xl md:text-7xl font-bold mb-6">
           QenzoChat.site
         </h1>
 
-        <p className="text-xl text-gray-400 max-w-2xl mb-8">
+        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mb-8">
           Meet foreigners, chat online and earn money from friendly conversations.
         </p>
 
@@ -45,44 +57,42 @@ export default function Home() {
           href="https://starhela.com/register.php?ref=ChatwithMula"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-green-500 hover:bg-green-600 transition-all duration-300 px-8 py-4 rounded-2xl text-white font-bold text-lg shadow-2xl"
+          className="
+            bg-green-500
+            hover:bg-green-600
+            transition-all
+            duration-300
+            px-8
+            py-4
+            rounded-2xl
+            text-white
+            font-bold
+            text-lg
+            shadow-2xl
+          "
         >
           Join Us Now
         </a>
-
       </section>
 
+      {/* APP SECTIONS */}
       <TypingIndicator />
-
       <LiveStats />
-
       <EarningsCalculator />
-
       <Stats />
-
       <OnlineUsers />
-
       <ChatSimulator />
-
       <GlobalHeatmap />
-
+      <EarningOpportunities />
       <Leaderboard />
-
       <Testimonials />
-
       <FAQ />
-
       <HowItWorks />
-
       <WithdrawalPopup />
-
       <LiveNotifications />
-
       <WhatsappFloat />
-
       <InstallModal />
 
     </main>
-
   )
 }

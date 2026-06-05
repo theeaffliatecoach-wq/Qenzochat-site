@@ -85,7 +85,8 @@ export default function Testimonials() {
             <div
               key={index}
               className="
-                bg-white dark:bg-black
+                bg-white dark:bg-gray-100 dark:bg-zinc-900
+transition-colors duration-500
                 border
                 border-zinc-800
                 rounded-3xl
