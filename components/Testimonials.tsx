@@ -148,7 +148,7 @@ transition-colors duration-500
                 mb-5
               ">
 
-                <p className="text-sm text-gray-700 dark:text-gray-300">
+                <p className="text-sm text-gray-600 dark:text-gray-300">
                   Recent Earnings
                 </p>
 

@@ -4,7 +4,6 @@ import Navbar from '@/components/navbar'
 import Stats from '@/components/Stats'
 import Testimonials from '@/components/Testimonials'
 import WithdrawalPopup from '@/components/WithdrawalPopup'
-import OnlineUsers from '@/components/OnlineUsers'
 import HowItWorks from '@/components/HowItWorks'
 import LiveStats from '@/components/LiveStats'
 import WhatsappFloat from '@/components/WhatsappFloat'
@@ -17,7 +16,6 @@ import ChatSimulator from '@/components/ChatSimulator'
 import EarningsTicker from '@/components/EarningsTicker'
 import GlobalHeatmap from '@/components/GlobalHeatmap'
 import Leaderboard from '@/components/Leaderboard'
-import InstallModal from '@/components/InstallModal'
 import EarningOpportunities from '@/components/EarningOpportunities'
 
 export default function Home() {
@@ -80,7 +78,6 @@ export default function Home() {
       <LiveStats />
       <EarningsCalculator />
       <Stats />
-      <OnlineUsers />
       <ChatSimulator />
       <GlobalHeatmap />
       <EarningOpportunities />
@@ -91,7 +88,7 @@ export default function Home() {
       <WithdrawalPopup />
       <LiveNotifications />
       <WhatsappFloat />
-      <InstallModal />
+      
 
     </main>
   )
